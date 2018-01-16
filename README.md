@@ -10,15 +10,15 @@
 
 ## 使用说明
 **用的是Python3.5**
-1,安装ADB 驱动，可以到[这里下载](https://adb.clockworkmod.com/)<br />
+
+1. 安装ADB 驱动，可以到[这里下载](https://adb.clockworkmod.com/)<br />
    安装 ADB 后，请在环境变量里将 adb 的安装路径保存到 PATH 变量里，确保 adb 命令可以被识别到
   
-2.需要安装模块 在命令行输入(pip install 模块名称) 模块名称： baidu-aip  lxml opencv-python bs4
+2. 需要安装模块 在命令行输入(pip install 模块名称) 模块名称： baidu-aip  lxml opencv-python bs4
 
-3.在assist.py里填写自己百度ocr的APPid</br>
-百度ocr：http://ai.baidu.com/tech/ocr/general
+3. 在assist.py里填写自己百度ocr的APPid 百度ocr：http://ai.baidu.com/tech/ocr/general
 
-4.连接手机<br>在答题前运行python3 assist.py 后面全程自动 :)
+4. 连接手机<br>在答题前运行python3 assist.py 后面全程自动 :)
 
 ## 参考项目
 * https://github.com/wuditken/MillionHeroes
