@@ -18,7 +18,7 @@
 
 3. 在assist.py里填写自己百度ocr的APPid 百度ocr：http://ai.baidu.com/tech/ocr/general
 
-4. 连接手机<br>在答题前运行python3 assist.py 后面全程自动 :)
+4. 连接手机，在答题前运行python3 assist.py 后面全程自动运行 :)
 
 ## 参考项目
 * https://github.com/wuditken/MillionHeroes
