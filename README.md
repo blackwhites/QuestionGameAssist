@@ -14,7 +14,7 @@
 1. 安装ADB 驱动，可以到[这里下载](https://adb.clockworkmod.com/)<br />
    安装 ADB 后，请在环境变量里将 adb 的安装路径保存到 PATH 变量里，确保 adb 命令可以被识别到
   
-2. 需要安装模块 在命令行输入(pip install 模块名称) 模块名称： baidu-aip  lxml opencv-python bs4
+2. 需要安装模块 在命令行输入(pip install 模块名称) 模块名称： baidu-aip  lxml opencv-python bs4 （windows 用户需要另外 pip install colorama 以支持终端高亮输出）
 
 3. 在assist.py里填写自己百度ocr的APPid 百度ocr：http://ai.baidu.com/tech/ocr/general
 
