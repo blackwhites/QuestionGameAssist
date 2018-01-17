@@ -124,7 +124,7 @@ def _parser_single_answer(answer):
 
 # 截取屏幕
 def get_screen():
-  global image_bytes
+  global sys_name
   pipe = subprocess.Popen("adb shell screencap -p",
                           stdin=subprocess.PIPE,
                           stdout=subprocess.PIPE, shell=True)
