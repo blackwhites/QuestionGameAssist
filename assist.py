@@ -124,6 +124,7 @@ def _parser_single_answer(answer):
 
 # 截取屏幕
 def get_screen():
+  global image_bytes
   pipe = subprocess.Popen("adb shell screencap -p",
                           stdin=subprocess.PIPE,
                           stdout=subprocess.PIPE, shell=True)
@@ -146,8 +147,6 @@ def run_job(screen):
   html = sogou_search(query)
   parse_answers(html)
   print('use {0} 秒'.format(time.time() - start))
-  with open('./question-choices', 'a+') as out_file:
-    out_file.write(query + '\n')
 
 pre_head_wb = None
 
