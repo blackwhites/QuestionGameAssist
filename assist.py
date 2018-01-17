@@ -7,9 +7,16 @@ from bs4 import BeautifulSoup
 import time
 import re
 import sys
+import platform
 from multiprocessing import Pool
 import subprocess
 import numpy as np
+
+sys_name = platform.system()
+# Windows 终端彩色输出支持
+if sys_name == 'Windows':
+  from colorama import init
+  init(convert=True)
 
 line_split = "=" * 50
 sys.setrecursionlimit(1000000)
@@ -120,7 +127,11 @@ def get_screen():
   pipe = subprocess.Popen("adb shell screencap -p",
                           stdin=subprocess.PIPE,
                           stdout=subprocess.PIPE, shell=True)
-  image_bytes = pipe.stdout.read().replace(b'\r\n', b'\n')
+  if sys_name == 'Windows':
+    image_bytes = pipe.stdout.read().replace(b'\r\r\n', b'\n')
+  else:
+    image_bytes = pipe.stdout.read().replace(b'\r\n', b'\n')
+    
   return cv2.imdecode(np.fromstring(image_bytes, np.uint8), cv2.IMREAD_GRAYSCALE)
 
 def run_job(screen):
